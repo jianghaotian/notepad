@@ -1,0 +1,55 @@
+.menubar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  border-bottom: 1px solid #d2d2d2;
+  user-select: none;
+  cursor: default;
+  z-index: 5;
+}
+.menubar .menu_title li {
+  float: left;
+  width: 60px;
+  height: 26px;
+  line-height: 26px;
+  border: 1px solid #fff;
+  text-align: center;
+}
+.menubar .menu_title li:hover {
+  background-color: #cce8ff;
+  border: 1px solid #99d1ff;
+}
+.menubar .menu {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 200px;
+  padding: 2px;
+  padding-left: 4px;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px #a6a6a6;
+  display: none;
+}
+.menubar .menu.active {
+  display: block;
+}
+.menubar .menu .menu_item {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 34px;
+  padding-right: 22px;
+}
+.menubar .menu .menu_item:hover {
+  background-color: #99d1ff;
+}
+.menubar .menu .menu_hr {
+  height: 0;
+  margin: 4px;
+  margin-left: 32px;
+  border: 1px solid #d7d7d7;
+}
+.menubar .menu .shortcut {
+  float: right;
+}
