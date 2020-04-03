@@ -1,7 +1,6 @@
 function Menubar() {
   // 元素
   this.$menubar = null;
-  this.$menu_title = null;
   this.$menus = [];
 
   // 菜单显示状态
@@ -40,7 +39,6 @@ function Menubar() {
       this.$menus.push($menu);
     }
     this.$menubar = $menubar;
-    this.$menu_title = $menu_title;
     return $menubar;
   }
   // 显示第 index 个菜单
