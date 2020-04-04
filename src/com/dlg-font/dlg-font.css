@@ -5,13 +5,17 @@
   height: 100%;
   width: 100%;
   z-index: 10;
+  display: none;
+}
+.dlg_font.show {
+  display: block;
 }
 .dlg_font .dlg_font_box {
   position: relative;
-  top: 100px;
+  /* top: 100px; */
   height: 498px;
   width: 438px;
-  margin: 0 auto;
+  margin: 100px auto;
   border: 1px solid #0f7fd6;
   box-shadow: 10px 10px 10px #d6d6d6;
   user-select: none;

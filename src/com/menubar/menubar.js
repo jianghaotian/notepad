@@ -29,7 +29,7 @@ function Menubar() {
         } else {
           var $menu_item = $(`<li class="menu_item">${menuData[i].menuItems[j].title}<span class="shortcut">${menuData[i].menuItems[j].shortcut}</span></li>`)
           // 绑定点击事件
-          $menu_item.click(menuData[i].menuItems[j].handler.bind(this, i, j));
+          $menu_item.click(menuData[i].menuItems[j].handler);
         }
         $menu.append($menu_item);
       }

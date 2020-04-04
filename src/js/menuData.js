@@ -168,14 +168,7 @@ var menuData = [
         title: '字体(F)...',
         shortcut: '',
         enabled: true,
-        handler: function() {
-          $dlgFont.show({
-            family: np.fontFamily,
-            style: np.fontStyle,
-            size: np.fontSize,
-            okHandler: np.fontHandler
-          });
-        }
+        handler: dlgFont.open.bind(dlgFont)
       }
     ],
     width: '156px'
@@ -211,3 +204,6 @@ var menuData = [
     width: '166px'
   }
 ];
+
+var $menubar = menubar.init(menuData);
+$notepad.append($menubar);
