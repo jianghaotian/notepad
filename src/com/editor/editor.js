@@ -7,6 +7,6 @@ function Editor () {
   this.init = function () {
     this.$editor.append(this.$textarea);
     return this.$editor;
-  }
+  };
 
 }

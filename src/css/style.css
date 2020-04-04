@@ -5,7 +5,7 @@
 li {
   list-style: none;
 }
-html, body, #notepad {
+html, body, .notepad {
   font-family: Microsoft YaHei;
   font-size: 12px;
   height: 100%;

@@ -34,7 +34,7 @@ function DlgFont (editor) {
         ul: this.sizes,
         default: 6
       }
-    ]
+    ];
 
     // 添加元素
     var $dlg_font = $('<div class="dlg_font"></div>');
@@ -42,7 +42,7 @@ function DlgFont (editor) {
     // 添加header
     var $header = $('<div class="header"></div>');
     var $fff = $('<div>字体</div>');
-    var $xxx = $('<div>X</div>')
+    var $xxx = $('<div>X</div>');
     $xxx.click(this.close.bind(this));
     $header.append($fff);
     $header.append($xxx);
@@ -68,8 +68,8 @@ function DlgFont (editor) {
     var $select_box = $('<div class="select_box"></div>');
     for (var i = 0; i < selectBoxData.length; i++) {
       var $select_box_item_span = $(`<span>${selectBoxData[i].title}</span>`);
-      var $select_box_item_input = $(`<input type="text">`);
-      var $select_box_item_ul = $(`<ul></ul>`);
+      var $select_box_item_input = $('<input type="text">');
+      var $select_box_item_ul = $('<ul></ul>');
       for (var j = 0; j < selectBoxData[i].ul.length; j++) {
         var $li = $(`<li>${selectBoxData[i].ul[j]}</li>`);
         if (i == 0) {
@@ -119,7 +119,7 @@ function DlgFont (editor) {
     $dlg_font.append($dlg_font_box);
     this.$dlg_font = $dlg_font;
     return $dlg_font;
-  }
+  };
   // 选择li，i为哪个ul，j为哪个li
   this.selectLi = function (i, j) {
     // 修改选中效果
@@ -145,7 +145,7 @@ function DlgFont (editor) {
       this.$select_box_inputs[i].val(this.sizes[j]);
       this.$sample_p.css('font-size', this.sizes[j] + 'px');
     }
-  }
+  };
   // 修改style
   this.changeStyle = function ($node, i) {
     if (i == 0) {
@@ -161,7 +161,7 @@ function DlgFont (editor) {
       $node.css('font-style', 'italic');
       $node.css('font-weight', 'bold');
     }
-  }
+  };
   // 保存选择
   this.selectSave = function () {
     var newSelect = this.newSelect;
@@ -170,14 +170,14 @@ function DlgFont (editor) {
     this.$textarea.css('font-family', this.fonts[newSelect[0]]);
     this.changeStyle(this.$textarea, newSelect[1]);
     this.$textarea.css('font-size', this.sizes[newSelect[2]] + 'px');
-  }
+  };
   // 关闭字体框
   this.close = function () {
     this.$dlg_font.removeClass('show');
-  }
+  };
   // 打开字体框
   this.open = function () {
     this.$dlg_font.addClass('show');
-  }
+  };
 
 }
